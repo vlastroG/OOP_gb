@@ -82,7 +82,7 @@ namespace BasicClasses
         /// Установить новый баланс
         /// </summary>
         /// <param name="newBalance">Новый баланс</param>
-        public void SetBalance(double newBalance)
+        private void SetBalance(double newBalance)
         {
             _Balance = newBalance;
         }
@@ -98,7 +98,7 @@ namespace BasicClasses
         /// Установить новый тип счета
         /// </summary>
         /// <param name="newType">Новый тип счета</param>
-        public void SetType(BankAccountType newType)
+        private void SetType(BankAccountType newType)
         {
             _Type = newType;
         }
@@ -110,14 +110,14 @@ namespace BasicClasses
             Console.WriteLine($"Номер счета: {_Number};\tБаланс: {_Balance};\tТип: {_Type}");
         }
         /// <summary>
-        /// Переопределение стандартного конструктора
+        /// Переопределение стандартного конструктора. Назначает только номер счета.
         /// </summary>
         public BankAccount()
         {
             SetNumber();
         }
         /// <summary>
-        /// Полный конструктор
+        /// Полный конструктор, назначающий номер, баланс и тип счета.
         /// </summary>
         /// <param name="number">Номер счета</param>
         /// <param name="balance">Баланс</param>
@@ -128,6 +128,23 @@ namespace BasicClasses
             SetBalance(balance);
             SetType(type);
         }
+        /// <summary>
+        /// Конструктор, задающий баланс счета.
+        /// </summary>
+        /// <param name="balance">Баланс счета</param>
+        public BankAccount(double balance)
+        {
+            SetNumber();
+            SetBalance(balance);
+        }
+        /// <summary>
+        /// Конструктор, задающий тип счета.
+        /// </summary>
+        /// <param name="type">Тип счета</param>
+        public BankAccount(BankAccountType type)
+        {
+            SetNumber();
+            SetType(type);
+        }
     }
-
 }
