@@ -6,7 +6,8 @@ namespace Lesson4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Building b1 = new();
+            b1.PrintInfo();
         }
     }
 }
