@@ -26,6 +26,10 @@ namespace BasicClasses
     internal class BankAccount
     {
         /// <summary>
+        /// Предыдущий номер счета
+        /// </summary>
+        private static int _ClosedNumber = 0;
+        /// <summary>
         /// Номер счета
         /// </summary>
         private int _Number;
@@ -45,21 +49,26 @@ namespace BasicClasses
         {
             return _Number;
         }
+
+        //public void SetNumber(int newNumber)
+        //{
+        //    if (newNumber >= 1)
+        //    {
+        //        _Number = newNumber;
+        //    }
+        //    else
+        //    {
+        //        throw new ArgumentOutOfRangeException(nameof(newNumber));
+        //    }
+        //}
+
         /// <summary>
         /// Установить номер счета
         /// </summary>
-        /// <param name="newNumber">Новый номер счета</param>
-        /// <exception cref="ArgumentOutOfRangeException">Неверный номер счета</exception>
-        public void SetNumber(int newNumber)
+        private void SetNumber()
         {
-            if (newNumber >= 1)
-            {
-                _Number = newNumber;
-            }
-            else
-            {
-                throw new ArgumentOutOfRangeException(nameof(newNumber));
-            }
+            _Number = _ClosedNumber + 1;
+            _ClosedNumber++;
         }
         /// <summary>
         /// Получить баланс
@@ -105,6 +114,7 @@ namespace BasicClasses
         /// </summary>
         public BankAccount()
         {
+            SetNumber();
         }
         /// <summary>
         /// Полный конструктор
@@ -112,9 +122,9 @@ namespace BasicClasses
         /// <param name="number">Номер счета</param>
         /// <param name="balance">Баланс</param>
         /// <param name="type">Тип счета</param>
-        public BankAccount(int number, double balance, BankAccountType type)
+        public BankAccount(double balance, BankAccountType type)
         {
-            SetNumber(number);
+            SetNumber();
             SetBalance(balance);
             SetType(type);
         }
