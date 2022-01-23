@@ -1,4 +1,5 @@
 ﻿using System;
+using static Lesson3.WorkWithString;
 
 namespace Lesson3
 {
@@ -23,6 +24,13 @@ namespace Lesson3
             acc1.PrintInfo();
             acc2.PrintInfo();
             Console.WriteLine();
+
+            Console.WriteLine("№2");
+            //2. Реализовать метод,
+            //который в качестве входного параметра принимает строку string,
+            //возвращает строку типа string, буквы в которой идут в обратном порядке.
+            //Протестировать метод.
+            Console.WriteLine(ReverseString(GetStringFromUser("Напишите что-нибудь интересное...")));
         }
     }
 }
