@@ -54,6 +54,39 @@ namespace BasicClasses
         }
 
         /// <summary>
+        /// Положить деньги на счет.
+        /// </summary>
+        /// <param name="money">Сумма ввода.</param>
+        public void PutMoney(double money)
+        {
+            Balance += money;
+        }
+
+        /// <summary>
+        /// Снять деньги со счета
+        /// </summary>
+        /// <param name="money">Запрашиваемая сумма</param>
+        /// <returns>Возвращаемая сумма, при условии наличия данной суммы на счете.</returns>
+        public double GetMoney(double money)
+        {
+            if ((money >= 0) && (money <= Balance))
+            {
+                Balance -= money;
+                return money;
+            }
+            else if (money < 0)
+            {
+                Console.WriteLine("Вы ввели отрицательную сумму!");
+                return 0;
+            }
+            else
+            {
+                Console.WriteLine("Недостаточно средств на счете!");
+                return 0;
+            }
+        }
+
+        /// <summary>
         /// Переопределение стандартного конструктора. Назначает только номер счета.
         /// </summary>
         public BankAccount()

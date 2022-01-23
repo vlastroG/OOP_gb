@@ -53,8 +53,20 @@ namespace BasicClasses
             acc9.Balance = 70;
             acc9.Type = BankAccountType.Deposit;
             acc9.PrintInfo();
+            Console.WriteLine();
 
-
+            Console.WriteLine("№5");
+            //5. * Добавить в класс счет в банке два метода:
+            //снять со счета и положить на счет. Метод снять со счета проверяет,
+            //возможно ли снять запрашиваемую сумму, и в случае положительного результата изменяет баланс.
+            BankAccount acc10 = new(1000);
+            acc10.PrintInfo();
+            acc10.PutMoney(10000);
+            acc10.PrintInfo();
+            acc10.GetMoney(1000000);
+            acc10.GetMoney(-1000);
+            acc10.GetMoney(500);
+            acc10.PrintInfo();
         }
 
     }
