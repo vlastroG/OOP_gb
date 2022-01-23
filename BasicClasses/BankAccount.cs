@@ -29,93 +29,39 @@ namespace BasicClasses
         /// Предыдущий номер счета
         /// </summary>
         private static int _ClosedNumber = 0;
+
         /// <summary>
         /// Номер счета
         /// </summary>
-        private int _Number;
+        public int Number { get; private set; }
+
         /// <summary>
         /// Баланс счета
         /// </summary>
-        private double _Balance;
+        public double Balance { get; set; }
+
         /// <summary>
         /// Тип счета
         /// </summary>
-        private BankAccountType _Type;
-        /// <summary>
-        /// Получить номер счета
-        /// </summary>
-        /// <returns>Номер счета</returns>
-        public int GetNumber()
-        {
-            return _Number;
-        }
+        public BankAccountType Type { get; set; }
 
-        //public void SetNumber(int newNumber)
-        //{
-        //    if (newNumber >= 1)
-        //    {
-        //        _Number = newNumber;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentOutOfRangeException(nameof(newNumber));
-        //    }
-        //}
-
-        /// <summary>
-        /// Установить номер счета
-        /// </summary>
-        private void SetNumber()
-        {
-            _Number = _ClosedNumber + 1;
-            _ClosedNumber++;
-        }
-        /// <summary>
-        /// Получить баланс
-        /// </summary>
-        /// <returns>Баланс</returns>
-        public double GetBalance()
-        {
-            return _Balance;
-        }
-        /// <summary>
-        /// Установить новый баланс
-        /// </summary>
-        /// <param name="newBalance">Новый баланс</param>
-        private void SetBalance(double newBalance)
-        {
-            _Balance = newBalance;
-        }
-        /// <summary>
-        /// Получить тип счета
-        /// </summary>
-        /// <returns>Тип счета</returns>
-        public BankAccountType GetType()
-        {
-            return _Type;
-        }
-        /// <summary>
-        /// Установить новый тип счета
-        /// </summary>
-        /// <param name="newType">Новый тип счета</param>
-        private void SetType(BankAccountType newType)
-        {
-            _Type = newType;
-        }
         /// <summary>
         /// Вывести информацию о счете в консоль: номер, баланс, тип
         /// </summary>
         public void PrintInfo()
         {
-            Console.WriteLine($"Номер счета: {_Number};\tБаланс: {_Balance};\tТип: {_Type}");
+            Console.WriteLine($"Номер счета: {Number};\tБаланс: {Balance};\tТип: {Type}");
         }
+
         /// <summary>
         /// Переопределение стандартного конструктора. Назначает только номер счета.
         /// </summary>
         public BankAccount()
         {
-            SetNumber();
+            Number = _ClosedNumber + 1;
+            _ClosedNumber++;
         }
+
         /// <summary>
         /// Полный конструктор, назначающий номер, баланс и тип счета.
         /// </summary>
@@ -124,27 +70,33 @@ namespace BasicClasses
         /// <param name="type">Тип счета</param>
         public BankAccount(double balance, BankAccountType type)
         {
-            SetNumber();
-            SetBalance(balance);
-            SetType(type);
+
+            Number = _ClosedNumber + 1;
+            _ClosedNumber++;
+            Balance = balance;
+            Type = type;
         }
+
         /// <summary>
         /// Конструктор, задающий баланс счета.
         /// </summary>
         /// <param name="balance">Баланс счета</param>
         public BankAccount(double balance)
         {
-            SetNumber();
-            SetBalance(balance);
+            Number = _ClosedNumber + 1;
+            _ClosedNumber++;
+            Balance = balance;
         }
+
         /// <summary>
         /// Конструктор, задающий тип счета.
         /// </summary>
         /// <param name="type">Тип счета</param>
         public BankAccount(BankAccountType type)
         {
-            SetNumber();
-            SetType(type);
+            Number = _ClosedNumber + 1;
+            _ClosedNumber++;
+            Type = type;
         }
     }
 }

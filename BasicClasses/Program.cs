@@ -46,6 +46,15 @@ namespace BasicClasses
             acc8.PrintInfo();
             Console.WriteLine();
 
+            Console.WriteLine("№4");
+            //4.В классе все методы для заполнения и получения значений полей заменить на свойства.
+            //Написать тестовый пример.
+            BankAccount acc9 = new();
+            acc9.Balance = 70;
+            acc9.Type = BankAccountType.Deposit;
+            acc9.PrintInfo();
+
+
         }
 
     }
