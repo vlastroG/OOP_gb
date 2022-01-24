@@ -53,6 +53,11 @@ namespace Lesson4
         /// </summary>
         public int Levels { get { return _levels; } }
 
+        /// <summary>
+        /// Установить количество этажей
+        /// </summary>
+        /// <param name="levels">Количество этажей</param>
+        /// <exception cref="ArgumentOutOfRangeException">Исключение, если количество этажей недопустимо</exception>
         private void SetLevels(int levels)
         {
             //Можно построить здание с числом этажей от 1 до 25.
@@ -111,7 +116,7 @@ namespace Lesson4
         private void SetApartments()
         {
             var apartmentsPerEntrance = 5; //Число квартир на 1 лестничной клетке.
-            _apartments = Levels * Entrances * apartmentsPerEntrance;
+            _apartments = Convert.ToInt32(Levels) * Entrances * apartmentsPerEntrance;
         }
 
         /// <summary>
@@ -132,8 +137,10 @@ namespace Lesson4
         /// <summary>
         /// Высота этажа
         /// </summary>
-        public double FloorHeight { get { return Height / Levels; } }
-
+        public double FloorHeight { get { return _height / _levels; } }
+        /// <summary>
+        /// Вывод информации о здании Номер, Высота, Количество этажей, Количество подъездов, Количество квартир в доме
+        /// </summary>
         public void PrintInfo()
         {
             Console.WriteLine("№ дома: {0}; Высота: {1}; Количество этажей: {2}; Количество подъездов: {3}; Количество квартир {4}.", Number, Height, Levels, Entrances, Apartments);
