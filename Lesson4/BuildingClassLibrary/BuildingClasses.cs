@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
-namespace Lesson4
+namespace BuildingClassLibrary
 {
+
     /// <summary>
     /// Строитель зданий
     /// </summary>
-    internal class Creator
+    public class Creator
     {
         /// <summary>
         /// Здание
         /// </summary>
-        internal class Building
+        public class Building
         {
             //1. Реализовать класс для описания здания
             //(уникальный номер здания, высота, этажность, количество квартир, подъездов).

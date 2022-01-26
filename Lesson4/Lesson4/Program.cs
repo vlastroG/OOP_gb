@@ -1,4 +1,5 @@
 ﻿using System;
+using BuildingClassLibrary;
 
 namespace Lesson4
 {
@@ -6,13 +7,13 @@ namespace Lesson4
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("№1");
             Creator.Building b1 = new();
             b1.PrintInfo();
 
             Creator.Building b2 = new(8, 25, 7);
             b2.PrintInfo();
 
-            Console.WriteLine("№1");
             Console.WriteLine();
             Console.WriteLine($"b1 FloorHeight: {b1.FloorHeight}");
             Console.WriteLine($"b2 FloorHeight: {b2.FloorHeight}");
@@ -36,6 +37,8 @@ namespace Lesson4
             Creator.HashTable.Remove(b2.Number);
             Console.WriteLine(Creator.HashTable.Count);
             Console.WriteLine();
+
+            Console.ReadLine();
         }
     }
 }
