@@ -102,10 +102,8 @@ namespace BasicClasses
         /// <param name="balance">Баланс</param>
         /// <param name="type">Тип счета</param>
         public BankAccount(double balance, BankAccountType type)
+            : this() // обращаемся к конструктору, описанному выше
         {
-
-            Number = _ClosedNumber + 1;
-            _ClosedNumber++;
             Balance = balance;
             Type = type;
         }
