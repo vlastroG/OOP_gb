@@ -235,8 +235,9 @@ namespace Polymorphism
             }
             else if ((num >= -10000) && (num <= 10000))
             {
-                var newNum = (int)(num * 100000);
-                return new RationalNumbers(newNum);
+                int pastPoint = 100000;//Количество сохраняемых знаков после запятой
+                var newNum = (int)(num * pastPoint);
+                return new RationalNumbers(newNum, pastPoint);
             }
             else
             {
