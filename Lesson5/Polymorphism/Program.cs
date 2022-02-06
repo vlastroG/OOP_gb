@@ -6,6 +6,7 @@ namespace Polymorphism
     {
         static void Main(string[] args)
         {
+            /*
             RationalNumbers num1 = new();
             RationalNumbers num2 = new(100);
             RationalNumbers num3 = new(21, 51);
@@ -39,6 +40,20 @@ namespace Polymorphism
             var nn1 = (RationalNumbers)a;
             b += (float)0.023456;
             var nn2 = (RationalNumbers)b;
+            */
+            ComplexNumbers n1 = new();
+            ComplexNumbers n2 = new(100, 20.6);
+            Console.WriteLine(n1);
+            Console.WriteLine(n2);
+            n1.RealA = 50 + 50;
+            bool res = (n1 != n2);
+            n1.RealB = 20 + 0.6;
+            res = (n1 == n2);
+            var res2 = n2 + n2;
+            res2 = n2 - n2;
+
+            var mul = n2 * res2;
+            mul = n2 * n2;
         }
     }
 }
