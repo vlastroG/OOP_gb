@@ -128,5 +128,30 @@ namespace BasicClasses
             _ClosedNumber++;
             Type = type;
         }
+
+        public static bool operator ==(BankAccount acc1, BankAccount acc2)
+        {
+            return (acc1.Type == acc2.Type);
+        }
+
+        public static bool operator !=(BankAccount acc1, BankAccount acc2)
+        {
+            return !(acc1.Type == acc2.Type);
+        }
+
+        public bool Equals(BankAccount acc2)
+        {
+            return (this.Type == acc2.Type);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Number, Type, Balance);
+        }
+
+        public override string ToString()
+        {
+            return $"№{Number} ({Type}): {Balance}";
+        }
     }
 }

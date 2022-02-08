@@ -6,6 +6,7 @@ namespace BasicClasses
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("№1");
             //1. Создать класс счет в банке с закрытыми полями:
             //номер счета, баланс, тип банковского счета(использовать перечислимый тип).
@@ -67,6 +68,15 @@ namespace BasicClasses
             acc10.GetMoney(-1000);
             acc10.GetMoney(500);
             acc10.PrintInfo();
+            */
+            BankAccount acc = new(700);
+            BankAccount acc2 = new(700, BankAccountType.Deposit);
+            var s = acc.ToString();
+            var hash = acc.GetHashCode();
+            var eq = acc2.Equals(acc);
+            var comp = (acc2 == acc);
+            var comp2 = (acc2 != acc);
+            var hash2 = acc2.GetHashCode();
         }
 
     }
