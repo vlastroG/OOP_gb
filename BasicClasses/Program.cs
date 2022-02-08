@@ -69,6 +69,7 @@ namespace BasicClasses
             acc10.GetMoney(500);
             acc10.PrintInfo();
             */
+            /*
             BankAccount acc = new(700);
             BankAccount acc2 = new(700, BankAccountType.Deposit);
             var s = acc.ToString();
@@ -77,6 +78,38 @@ namespace BasicClasses
             var comp = (acc2 == acc);
             var comp2 = (acc2 != acc);
             var hash2 = acc2.GetHashCode();
+            */
+            Figure f1 = new();
+            f1.Print();
+            Figure f2 = new(20, 20, true, Color.Red);
+            Figure f3 = new(Color.Blue);
+            Figure f4 = new(15, 5, false, Color.Orange);
+            f3.MoveHor(10);
+            f2.Print();
+            f3.Print();
+            f4.Print();
+
+
+            Point p1 = new();
+            p1.MoveVer(9);
+            p1.Color = Color.Indigo;
+            p1.Print();
+
+
+            Circle c1 = new(12, 12, true, Color.Yellow, 3);
+            var sqCir = c1.Square();
+            c1.Print();
+            c1.MoveHor(6);
+            c1.Print();
+
+            Rectangle rec1 = new();
+            rec1.MoveHor(21);
+            rec1.MoveVer(12);
+            rec1.Length = 5;
+            rec1.Width = 7;
+            rec1.Color = Color.Violet;
+            var recS = rec1.Square();
+            rec1.Print();
         }
 
     }
