@@ -138,10 +138,8 @@ namespace Lesson3
         /// Конструктор, задающий тип счета.
         /// </summary>
         /// <param name="type">Тип счета</param>
-        public BankAccount(BankAccountType type)
+        public BankAccount(BankAccountType type) : this()
         {
-            Number = _ClosedNumber + 1;
-            _ClosedNumber++;
             Type = type;
         }
     }
