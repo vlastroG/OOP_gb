@@ -57,12 +57,7 @@ namespace Polymorphism
         }
         public static bool operator ==(ComplexNumbers n1, ComplexNumbers n2)
         {
-            if ((n1.RealA == n2.RealA) && (n1.RealB == n2.RealB))
-            {
-                return true;
-            }
-            else
-                return false;
+            return Equals(n1, n2);
         }
         public static bool operator !=(ComplexNumbers n1, ComplexNumbers n2)
         {
