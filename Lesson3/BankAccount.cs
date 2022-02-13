@@ -108,8 +108,7 @@ namespace Lesson3
         /// </summary>
         public BankAccount()
         {
-            Number = _ClosedNumber + 1;
-            _ClosedNumber++;
+            Number = ++_ClosedNumber;
         }
 
         /// <summary>
