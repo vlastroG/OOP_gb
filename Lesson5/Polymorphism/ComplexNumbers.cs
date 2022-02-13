@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Polymorphism
 {
-    internal class ComplexNumbers
+    internal readonly struct ComplexNumbers
     {
         /// <summary>
         /// Параметр вещественной части
