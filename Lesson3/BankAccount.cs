@@ -127,10 +127,8 @@ namespace Lesson3
         /// Конструктор, задающий баланс счета.
         /// </summary>
         /// <param name="balance">Баланс счета</param>
-        public BankAccount(double balance)
+        public BankAccount(double balance) : this()
         {
-            Number = _ClosedNumber + 1;
-            _ClosedNumber++;
             Balance = balance;
         }
 
