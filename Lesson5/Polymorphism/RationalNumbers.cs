@@ -9,7 +9,7 @@ namespace Polymorphism
     /// <summary>
     /// Класс рациональных чисел
     /// </summary>
-    internal class RationalNumbers
+    internal readonly struct RationalNumbers
     {
         /// <summary>
         /// Значение числителя
