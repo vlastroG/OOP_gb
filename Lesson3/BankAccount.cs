@@ -117,11 +117,8 @@ namespace Lesson3
         /// <param name="number">Номер счета</param>
         /// <param name="balance">Баланс</param>
         /// <param name="type">Тип счета</param>
-        public BankAccount(double balance, BankAccountType type)
+        public BankAccount(double balance, BankAccountType type) : this()
         {
-
-            Number = _ClosedNumber + 1;
-            _ClosedNumber++;
             Balance = balance;
             Type = type;
         }
