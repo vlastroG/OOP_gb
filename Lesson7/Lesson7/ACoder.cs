@@ -30,7 +30,7 @@ namespace Lesson7
             {
                 var isLow = char.IsLower(s[i]);
                 var sCharInt = char.ToLower(s[i]) - 1;
-                if (isLow)
+                if (isLow)//Возвращение исходного регистра буквы
                 {
                     arr[i] = (char)sCharInt;
                 }
@@ -58,7 +58,7 @@ namespace Lesson7
             {
                 var isLow = char.IsLower(s[i]);
                 var sCharInt = char.ToLower(s[i]) + 1;
-                if (isLow)
+                if (isLow)//Возвращение исходного регистра буквы
                 {
                     arr[i] = (char)sCharInt;
                 }

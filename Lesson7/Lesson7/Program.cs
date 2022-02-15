@@ -12,3 +12,10 @@ Console.WriteLine(j);
 Console.WriteLine(g.Decode(j));
 Console.ReadLine();
 
+Console.WriteLine();
+BCoder b1 = new();
+Console.WriteLine(b1.Encode(s));
+Console.WriteLine(b1.Decode(b1.Encode(s)));
+Console.WriteLine();
+Console.ReadLine();
+
