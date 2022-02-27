@@ -30,7 +30,11 @@ namespace BasicClasses
         /// <param name="w">Ширина</param>
         /// <param name="l">Длина</param>
         public Rectangle(uint x, uint y, bool vis, Color col, uint w, uint l)
-            : base(x, y, vis, col) { Width = w; Length = l; }
+            : base(x, y, vis, col) 
+        {
+            Width = w; 
+            Length = l; 
+        }
         /// <summary>
         /// Площадь прямоугольника
         /// </summary>
