@@ -23,7 +23,7 @@ namespace Lesson7
         {
             if (s is null)
             {
-                throw new ArgumentException($"{nameof(s)} is Null");
+                throw new ArgumentNullException(nameof(s));
             }
             char[] arr = new char[s.Length];
             for (int i = 0; i < s.Length; i++)
