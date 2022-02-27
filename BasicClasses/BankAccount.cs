@@ -131,7 +131,7 @@ namespace BasicClasses
 
         public static bool operator ==(BankAccount acc1, BankAccount acc2)
         {
-            return (acc1.Type == acc2.Type);
+            return Equals(acc1, acc2);
         }
 
         public static bool operator !=(BankAccount acc1, BankAccount acc2)
