@@ -31,7 +31,7 @@ namespace BasicClasses
         /// <returns>Площадь</returns>
         public double Square()
         {
-            return 3.14159265 * Radius * Radius;
+            return Math.PI * Radius * Radius;
         }
         /// <summary>
         /// Вывод окружности на экран
