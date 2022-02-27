@@ -141,7 +141,7 @@ namespace BasicClasses
 
         public bool Equals(BankAccount acc2)
         {
-            return (this.Type == acc2.Type);
+            return !ReferenceEquals(null, acc2) && Number == acc2.Number;
         }
 
         public override int GetHashCode()
